@@ -4,9 +4,9 @@
 
 ## 1. URL
 
--   메인넷: https://store-purchase.kios.bosagora.org
--   테스트넷: https://store-purchase.kios.testnet.bosagora.org
--   개발넷: http://store-purchase.devnet.bosagora.org:3030
+-   메인넷: https://store.kios.bosagora.org
+-   테스트넷: https://store.test.kios.bosagora.org
+-   개발넷: http://store.devnet.kios.bosagora.org:3030
 
 ## 2. 거래를 저장하는 엔드포인트
 
