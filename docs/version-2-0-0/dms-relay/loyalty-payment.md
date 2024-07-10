@@ -19,7 +19,7 @@
     -   [3.2. 지불에 사용될 예상 로열티 산출](#32-지불에-사용될-예상-로열티-산출)
     -   [3.3. 상점의 정보](#33-상점의-정보)
     -   [3.4. 모든 상점의 정보](#34-모든-상점의-정보)
-    -   [3.5. 환률 변환](#36-환률-변환)
+    -   [3.5. 환률 변환](#35-환률-변환)
 
 -   [4. KIOSK 를 위한 결제관련 엔드포인트](#4-kiosk-를-위한-결제관련-엔드포인트)
 
@@ -209,9 +209,9 @@
 
 ## 2. URL
 
--   메인넷: https://relay.acc.bosagora.org
--   테스트넷: https://relay.test.acc.bosagora.org
--   개발넷: http://relay.dev.acc.bosagora.org:27070
+-   메인넷: https://relay.main.acccoin.io
+-   테스트넷: https://relay.test.acccoin.io
+-   개발넷: http://relay.dev.acccoin.io:27070
 
 [상단으로 이동](#로열티를-사용한-결제-프로세스)
 
@@ -256,7 +256,7 @@
 | ---------- | ------ | ---- |----------------------------------------|
 | account    | string | Yes  | 월렛주소 (임시주소 or 실제주소)                    |
 | amount     | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음) |
-| currency   | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)         |
+| currency   | string | Yes  | 환률코드(usd, krw, ACC, point...)         |
 
 #### - 결과
 
@@ -264,7 +264,7 @@
 |--------------| ------ | ---- |----------------------------------------|
 | account      | string | Yes  | 월렛주소 (실제주소)                            |
 | amount       | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음) |
-| currency     | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)         |
+| currency     | string | Yes  | 환률코드(usd, krw, ACC, point...)         |
 | balance      | string | Yes  | 잔고 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)   |
 | balanceValue | string | Yes  | 잔고의 currency 단위의 가치                    |
 | paidPoint    | string | Yes  | (예상)지불될 포인트, loyaltyType가 0일때 유효한 값이다  |
@@ -360,8 +360,8 @@
 | 파라메타명  | 유형     | 필수 | 설명                                    |
 |--------|--------| ---- |---------------------------------------|
 | amount | string | Yes  | 금액 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)  |
-| from   | string | Yes  | 변환 할 환률코드(usd, krw, lyt, acc, point...)   |                                                                                                                                                                                                     |
-| to     | string | Yes  | 변환 될 환률코드(usd, krw, lyt, acc, point...)   |
+| from   | string | Yes  | 변환 할 환률코드(usd, krw, ACC, point...)   |                                                                                                                                                                                                     |
+| to     | string | Yes  | 변환 될 환률코드(usd, krw, ACC, point...)   |
 
 #### - 결과
 
@@ -395,7 +395,7 @@
 | ---------- | ------ | ---- |----------------------------------------|
 | purchaseId | string | Yes  | 구매 아이디                                 |
 | amount     | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음) |
-| currency   | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)         |
+| currency   | string | Yes  | 환률코드(usd, krw, ACC, point...)         |
 | shopId     | string | Yes  | 상점 아이디                                 |
 | account    | string | Yes  | 월렛주소(임시주소)                             |
 
@@ -406,7 +406,7 @@
 | paymentId            | string | Yes  | 지불 아이디                                                                                                                                                                                                                                                                                                      |
 | purchaseId           | string | Yes  | 구매 아이디                                                                                                                                                                                                                                                                                                      |
 | amount               | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                                                                                                                                                                                                                                      |
-| currency             | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)                                                                                                                                                                                                                                                                              |
+| currency             | string | Yes  | 환률코드(usd, krw, ACC, point...)                                                                                                                                                                                                                                                                              |
 | shopId               | string | Yes  | 상점 아이디                                                                                                                                                                                                                                                                                                      |
 | account              | string | Yes  | 월렛주소(실제주소)                                                                                                                                                                                                                                                                                                  |
 | paidPoint            | string | Yes  | (예상)지불될 포인트, loyaltyType가 0일때 유효한 값이다                                                                                                                                                                                                                                                                       |
@@ -457,7 +457,7 @@
 | paymentId            | string | Yes  | 지불 아이디                                                                                                                                                                                                                                                                                                      |
 | purchaseId           | string | Yes  | 구매 아이디                                                                                                                                                                                                                                                                                                      |
 | amount               | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                                                                                                                                                                                                                                      |
-| currency             | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)                                                                                                                                                                                                                                                                              |
+| currency             | string | Yes  | 환률코드(usd, krw, ACC, point...)                                                                                                                                                                                                                                                                              |
 | shopId               | string | Yes  | 상점 아이디                                                                                                                                                                                                                                                                                                      |
 | account              | string | Yes  | 월렛주소(실제주소)                                                                                                                                                                                                                                                                                                        |
 | paidPoint            | string | Yes  | (예상)지불될 포인트, loyaltyType가 0일때 유효한 값이다                                                                                                                                                                                                                                                                       |
@@ -503,7 +503,7 @@
 | paymentId            | string | Yes  | 지불 아이디                                                                                                                                                  |
 | purchaseId           | string | Yes  | 구매 아이디                                                                                                                                                  |
 | amount               | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                                                                                  |
-| currency             | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)                                                                                                                          |
+| currency             | string | Yes  | 환률코드(usd, krw, ACC, point...)                                                                                                                          |
 | shopId               | string | Yes  | 상점 아이디                                                                                                                                                  |
 | account              | string | Yes  | 월렛주소(실제주소)                                                                                                                                                   |
 | paidPoint            | string | Yes  | (예상)지불될 포인트, loyaltyType가 0일때 유효한 값이다                                                                                                                   |
@@ -550,7 +550,7 @@
 | paymentId            | string | Yes  | 지불 아이디                                                                                                                                                                                                    |
 | purchaseId           | string | Yes  | 구매 아이디                                                                                                                                                                                                    |
 | amount               | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                                                                                                               |
-| currency             | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)                                                                                                                                                                             |
+| currency             | string | Yes  | 환률코드(usd, krw, ACC, point...)                                                                                                                                                                             |
 | shopId               | string | Yes  | 상점 아이디                                                                                                                                                                                                    |
 | account              | string | Yes  | 월렛주소(실제주소)                                                                                                                                                                                                       |
 | paidPoint            | string | Yes  | (예상)지불될 포인트, loyaltyType가 0일때 유효한 값이다                                                                                                                                                         |
@@ -895,7 +895,7 @@
 | paymentId            | string | Yes  | 지불 아이디                                                                                                                  |
 | purchaseId           | string | Yes  | 구매 아이디                                                                                                                  |
 | amount               | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                             |
-| currency             | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)                                                                                           |
+| currency             | string | Yes  | 환률코드(usd, krw, ACC, point...)                                                                                           |
 | shopId               | string | Yes  | 상점 아이디                                                                                                                  |
 | account              | string | Yes  | 월렛주소                                                                                                                     |
 | paidPoint            | string | Yes  | 지불될(된) 포인트, loyaltyType가 0일때 유효한 값이다                                                                         |
@@ -937,7 +937,7 @@
 | paymentId      | string | Yes  | 지불 아이디                                                                                                                  |
 | purchaseId     | string | Yes  | 구매 아이디                                                                                                                  |
 | amount         | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                             |
-| currency       | string | Yes  | 환률코드(usd, krw, lyt, acc, point...)                                                                                           |
+| currency       | string | Yes  | 환률코드(usd, krw, ACC, point...)                                                                                           |
 | shopId         | string | Yes  | 상점 아이디                                                                                                                  |
 | account        | string | Yes  | 월렛주소                                                                                                                     |
 | paymentStatus  | int | Yes  | 처리상태 <br/>11:신규결제접수<br/>12:신규결제승인접수실패<br/>13:신규결제승인확인실패<br/>14:신규결제승인접수완료<br/>15:신규결제승인확인완료<br/>16:신규결제사용자거부<br/>17:신규결제결과응답<br/>18:신규결제완료<br/>19:신규결제실패<br/>51:취소결제접수<br/>52:취소결제승인접수실패<br/>53:취소결제승인확인실패<br/>54:취소결제승인접수완료<br/>55:취소결제승인확인완료<br/>56:취소결제사용자거부<br/>57:취소결제결과응답<br/>58:취소결제완료<br/>59:취소결제실패 |
@@ -970,7 +970,7 @@
 | paymentId     | string | Yes  | 지불 아이디                                                                                                                 |
 | purchaseId    | string | Yes  | 구매 아이디                                                                                                                 |
 | amount        | string | Yes  | 상품가격 (소수점이하 18자리로 표시된 문자, 소수점 포함하지 않음)                                                            |
-| currency      | string | Yes  | 환률코드(usd, krw, lyt, acc, acc, point...)                                                                                          |
+| currency      | string | Yes  | 환률코드(usd, krw, ACC, acc, point...)                                                                                          |
 | shopId        | string | Yes  | 상점 아이디                                                                                                                 |
 | account       | string | Yes  | 월렛주소                                                                                                                    |
 | paymentStatus | int    | Yes  | 처리상태 <br/>11:신규결제접수<br/>12:신규결제승인접수실패<br/>13:신규결제승인확인실패<br/>14:신규결제승인접수완료<br/>15:신규결제승인확인완료<br/>16:신규결제사용자거부<br/>17:신규결제결과응답<br/>18:신규결제완료<br/>19:신규결제실패<br/>51:취소결제접수<br/>52:취소결제승인접수실패<br/>53:취소결제승인확인실패<br/>54:취소결제승인접수완료<br/>55:취소결제승인확인완료<br/>56:취소결제사용자거부<br/>57:취소결제결과응답<br/>58:취소결제완료<br/>59:취소결제실패 |
@@ -1239,7 +1239,7 @@
 | 2004  | 임시주소가 존재하지 않거나 사용기간이 만료되었습니다<br/>Temporary address that does not exist                                                    |
 | 2005  | 사용자 모바일의 알림이 허용되지 않았습니다<br/>User's mobile notification is not allowed                                                     |
 | 2006  | 대리지갑주소를 찾을 수 없습니다<br/>Can not found delegator                                                                             |
-| 2007  | 전화번화형식이 유효하지 않습니다<br/>The phone number format is invalid                                                                  |
+| 2007  | 전화번호형식이 유효하지 않습니다<br/>The phone number format is invalid                                                                  |
 | 2008  | 메세지를 보내기 위해 필요한 모바일정보를 찾을 수 없습니다<br/>Mobile information not found                                                         |
 | 2020  | 지불에 대한 상태코드는 승인을 할 수 없습니다<br/>The status code for this payment cannot be approved                                         |
 | 2022  | 지불에 대한 상태코드는 취소를 할 수 없습니다<br/>The status code for this payment cannot be cancel                                           |
