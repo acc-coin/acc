@@ -1252,6 +1252,8 @@
 | 2030  | 해당 지불은 승인 전이기 때문에 닫을 수 없습니다<br/>This payment cannot be closed before it is approved                                       |
 | 2033  | 작업아이디가 존재하지 않습니다<br/>The task ID is not exist                                                                             |
 | 2040  | 작업에 대한 상태코드는 승인을 할 수 없습니다<br/>The status code for this task cannot be approved                                            |
+| 3001  | 브릿지 기능은 아직 유효하지 않습니다<br/>Bridge functionality is not yet available                                                        |
+| 3072  | 상점아이디가 유효하지 않습니다<br/>The shopId is invalid                                                                                |
 | 4000  | 사용자에 의해 거부되었습니다<br/>Denied by user                                                                                        |
 | 5000  | 스마트컨트랙트 실행중 오류가 발생했습니다<br/>Smart Contract Error                                                                           |
 | 6000  | 내부서버에서 오류가 발생했습니다<br/>Server Error                                                                                        |

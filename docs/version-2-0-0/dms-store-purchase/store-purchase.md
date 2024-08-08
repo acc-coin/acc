@@ -243,6 +243,7 @@
 | 2003 | 전화번호가 유효하지 않습니다<br/>This is not a phone number format. International Standard (+82 10-1000-2000) |
 | 2004 | 구매총금액과 상세구매내역의 총합이 일치하지 않습니다<br/>totalAmount and sum of detailed purchase do not match           |
 | 2005 | 등록되지 않은 상점아이디입니다<br/>Unregistered shop ID                                                        |
-| 3051 | 엑세스키가 유효하지 않습니다<br/>The access key entered is not valid                                          |
+| 3051 | 엑세스키가 유효하지 않습니다<br/>The access key entered is not valid                                          |                                            |
+| 3072 | 상점아이디가 유효하지 않습니다<br/>The shopId is invalid                                                                                |
 
 [상단으로 이동](#로열티를-사용한-결제-프로세스)
